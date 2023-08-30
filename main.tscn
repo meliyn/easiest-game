@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://bk3lxlmmuvsqc"]
+
+[ext_resource type="FontFile" uid="uid://t5gvfjpgm2d8" path="res://NotoSansTC-Black.otf" id="1_tldyk"]
+[ext_resource type="Script" path="res://quit_button.gd" id="2_byg6g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sf8b1"]
+font = ExtResource("1_tldyk")
+font_size = 50
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.5
+offset_top = -100.0
+offset_right = 99.5
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "你贏了
+You Win"
+label_settings = SubResource("LabelSettings_sf8b1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "離開 Quit"
+script = ExtResource("2_byg6g")
+
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="VBoxContainer/QuitButton" method="_on_pressed"]

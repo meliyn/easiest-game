@@ -1,0 +1,31 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://8ay1ujmde1p5"]
+
+[ext_resource type="FontFile" uid="uid://t5gvfjpgm2d8" path="res://NotoSansTC-Black.otf" id="1_c3k3x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rp743"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcuf6"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aric0"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.0666667, 0.0666667, 0.0666667, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/fonts/font = ExtResource("1_c3k3x")
+Button/styles/focus = SubResource("StyleBoxEmpty_rp743")
+Button/styles/hover = SubResource("StyleBoxFlat_fcuf6")
+Button/styles/normal = SubResource("StyleBoxFlat_aric0")
